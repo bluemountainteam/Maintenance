@@ -20,12 +20,18 @@ class GestionMaintenanceController extends Controller
 {
     public function index()
     {
+        if(!can('maintenance'))
+            return back()->with('error', _t("Accés non autorisé."));
+
         $maintenances = Maintenance::idDesc()->get();
         return view('vendor.maintenances.index', compact('maintenances'));
     }
 
     public function create()
     {
+        if(!can('maintenance'))
+            return back()->with('error', _t("Accés non autorisé."));
+
         getDatePicker();
         getValidate();
         getClockPicker();
@@ -46,6 +52,9 @@ class GestionMaintenanceController extends Controller
      */
     public function store(Request $request)
     {
+        if(!can('maintenance'))
+            return back()->with('error', _t("Accés non autorisé."));
+
         $req = $request->all();
         $req['status'] = isset($req['status']) ? 1 : 0;
         $req['begin'] = Carbon::createFromFormat('d/m/Y H:i', $req['begin'] . ' ' . $req['begin_clock'], 'Europe/Paris');
@@ -73,6 +82,9 @@ class GestionMaintenanceController extends Controller
      */
     public function edit($id)
     {
+        if(!can('maintenance'))
+            return back()->with('error', _t("Accés non autorisé."));
+
         getDatePicker();
         getValidate();
         getClockPicker();
@@ -95,6 +107,9 @@ class GestionMaintenanceController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if(!can('maintenance'))
+            return back()->with('error', _t("Accés non autorisé."));
+
         $req = $request->all();
 
         $maintenance = Maintenance::find($id);
@@ -122,6 +137,9 @@ class GestionMaintenanceController extends Controller
      */
     public function destroy($id)
     {
+        if(!can('maintenance'))
+            return back()->with('error', _t("Accés non autorisé."));
+
         $maintenance = Maintenance::find($id);
         $maintenance->delete();
         Cache::forget('maintenance');
