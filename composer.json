@@ -1,0 +1,29 @@
+{
+    "name": "dlouvard/laravel-gestionmaintenance",
+     "minimum-stability": "dev",
+    "description": "Add Maintenance Gestion for Laravel 5",
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": ">=5.1"
+    },
+    "keywords": [
+        "laravel",
+        "framework",
+        "maintenance",
+        "laravel maintenance",
+        "maintenance laravel",
+        "Damien Louvard"
+    ],
+    "authors": [
+        {
+            "name": "Damien Louvard",
+            "email": "contact@damien-louvard.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "Dlouvard\\LaravelGestionmaintenance\\": "src/"
+        }
+    }
+  }
+
