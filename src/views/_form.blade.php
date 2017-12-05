@@ -9,7 +9,7 @@
         @endif
     </div>
 </div>
-{!! BootForm::text('title','Titre',null,['required','placeholder' => 'Nom donnée à cette maintenance']) !!}
+{!! BootForm::text('title','Titre',null,['required','placeholder' => 'Nom donné à cette maintenance']) !!}
 <div class="form-group form-text"><label for="maintenance_begin" class="col-sm-3 control-label">Date
         Début</label>
     <div class="col-sm-9">

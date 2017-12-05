@@ -6,7 +6,7 @@
  * Time: 18:49
  */
 
-namespace Dlouvard\LaravelGestionmaintenance;
+namespace BlueMountainTeam\LaravelGestionmaintenance;
 
 
 use App\Http\Controllers\Controller;
@@ -55,7 +55,7 @@ class GestionMaintenanceController extends Controller
         Maintenance::create($req);
         Cache::forget('maintenance');
         Cache::forget('alert_Maintenance');
-        return redirect(action('\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController@index'))->with('success', "Maintenance créée avec succès");
+        return redirect(action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@index'))->with('success', "Maintenance créée avec succès");
     }
     public function show($id)
     {
@@ -105,7 +105,7 @@ class GestionMaintenanceController extends Controller
         Cache::forget('maintenance');
         Cache::forget('alert_Maintenance');
 
-        return redirect(action('\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController@index'))->with('success', "Maintenance mis à jour");
+        return redirect(action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@index'))->with('success', "Maintenance mis à jour");
     }
 
     /**
@@ -120,7 +120,7 @@ class GestionMaintenanceController extends Controller
         $maintenance->delete();
         Cache::forget('maintenance');
         Cache::forget('alert_Maintenance');
-        return redirect(action('\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController@index'))->with('success', "Maintenance supprimée");
+        return redirect(action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@index'))->with('success', "Maintenance supprimée");
     }
 
 }

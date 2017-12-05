@@ -1,6 +1,6 @@
 <?php
 
-namespace Dlouvard\LaravelGestionmaintenance\Models;
+namespace BlueMountainTeam\LaravelGestionmaintenance\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

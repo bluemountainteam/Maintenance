@@ -1,5 +1,5 @@
 <?php
-namespace Dlouvard\LaravelGestionmaintenance\Middleware;
+namespace BlueMountainTeam\LaravelGestionmaintenance\Middleware;
 
 use Illuminate\Support\Facades\Auth;
 use Closure;

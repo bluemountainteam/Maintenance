@@ -9,7 +9,7 @@ if (!function_exists('maintenance_status')) {
     function maintenance_status()
     {
         $maintenance = \Cache::get('maintenance', function () {
-            return \Dlouvard\LaravelGestionmaintenance\Models\Maintenance::where('status', 1)->first();
+            return \BlueMountainTeam\LaravelGestionmaintenance\Models\Maintenance::where('status', 1)->first();
         });
 
         if ($maintenance):
@@ -36,7 +36,7 @@ if (!function_exists('maintenance_remaning')) {
     function maintenance_remaning($date = 'begin')
     {
         $maintenance = \Cache::get('maintenance', function () {
-            return \Dlouvard\LaravelGestionmaintenance\Models\Maintenance::where('status', 1)->first();
+            return \BlueMountainTeam\LaravelGestionmaintenance\Models\Maintenance::where('status', 1)->first();
         });
 
         $restant = \Carbon::parse($maintenance->begin)->timestamp - \Carbon::now()->timestamp;
@@ -56,7 +56,7 @@ if (!function_exists('maintenance_title')) {
     function maintenance_title()
     {
         if (maintenance_status() == 1)
-            return '<h4 class="text-center txt-color-red bold">Maintenance activé</h4>';
+            return '<h4 class="text-center txt-color-red bold">Maintenance activée</h4>';
         elseif (maintenance_status() == 2)
             return '<h5 class="text-center txt-color-yellow bold font-md">Maintenance en prévision :</h5>';
         return null;
@@ -68,7 +68,7 @@ if (!function_exists('maintenance')) {
     function maintenance()
     {
         $maintenance = \Cache::get('maintenance', function () {
-            return \Dlouvard\LaravelGestionmaintenance\Models\Maintenance::where('status', 1)->first();
+            return \BlueMountainTeam\LaravelGestionmaintenance\Models\Maintenance::where('status', 1)->first();
         });
         if ($maintenance):
             $begin = $maintenance->begin;

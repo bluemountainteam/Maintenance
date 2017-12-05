@@ -1,5 +1,5 @@
 <?php
-namespace Dlouvard\LaravelGestionmaintenance;
+namespace BlueMountainTeam\LaravelGestionmaintenance;
 /**
  * Created by PhpStorm.
  * User: dlouvard_imac
@@ -28,11 +28,10 @@ class GestionmaintenanceServiceProvider extends ServiceProvider
 
     public function register()
     {
-
         $this->app->bind('gestionmaintenance', function ($app) {
             return new GestionMaintenance($app);
         });
-        $this->app['router']->group(['namespace' => '\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController','middleware' => ['web']], function () {
+        $this->app['router']->group(['namespace' => '\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController','middleware' => ['web']], function () {
             require __DIR__.'/routes.php';
         });
 

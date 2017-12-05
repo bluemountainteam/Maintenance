@@ -16,7 +16,7 @@
     "licence": "MIT",
     "autoload": {
         "psr-4": {
-          "BlueMountainTeam\\Maintenance\\": "src/"
+          "BlueMountainTeam\\LaravelGestionmaintenance\\": "src/"
         }
     }
   }

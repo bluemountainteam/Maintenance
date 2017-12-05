@@ -33,7 +33,7 @@
                             <tr>
                                 <td>{!! status($v->status) !!}</td>
                                 <td>
-                                    <a href="{{action('\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController@edit',$v->id)}}">{{$v->title}}</a>
+                                    <a href="{{action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@edit',$v->id)}}">{{$v->title}}</a>
                                 </td>
                                 <td>{{$v->begin_all}}</td>
                                 <td>{{$v->end_all}}</td>
@@ -42,7 +42,7 @@
                                 <td class="hidden-xs">
                                     <a class="btn btn-danger btndangerwhite btn-xs" data-method="delete"
                                        data-confirm="{{trad('Etes vous sur de vouloir supprimer cette maintenance ?')}}"
-                                       href="{{action('\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController@destroy',$v->id)}}"><i
+                                       href="{{action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@destroy',$v->id)}}"><i
                                                 class="fa fa-trash-o"></i></a>
                                 </td>
                             </tr>

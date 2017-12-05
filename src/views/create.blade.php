@@ -2,7 +2,7 @@
 @section('content')
     <div class=" margin-bottom-10">
         <div class=" text-right">
-            <a class="btn btn-primary" href="{{action('\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController@index')}}"><i
+            <a class="btn btn-primary" href="{{action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@index')}}"><i
                         class="fa fa-reply"></i> {{trad('Retour')}}</a>
 
         </div>
@@ -15,7 +15,7 @@
             <div role="content">
                 <div class="widget-body ">
                     <div class="col-sm-10 col-sm-offset-1">
-                        {!! BootForm::open(null,['class' => 'form-horizontal','id' => 'Form','url' => action('\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController@store')]) !!}
+                        {!! BootForm::open(null,['class' => 'form-horizontal','id' => 'Form','url' => action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@store')]) !!}
                        @include('vendor.maintenances._form')
                         {!! BootForm::close() !!}
                     </div>

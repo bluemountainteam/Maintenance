@@ -11,7 +11,7 @@
         @endif
         @if(can('maintenance'))
             <span class="project-selector"><a
-                        href="{{action('\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController@index')}}">{{maintenance()}}</a></span>
+                        href="{{action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@index')}}">{{maintenance()}}</a></span>
         @else
             <span class="project-selector">{{maintenance()}}</span>
         @endif
