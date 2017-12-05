@@ -11,7 +11,7 @@
         "framework",
         "maintenance",
         "laravel maintenance",
-        "maintenance laravel",
+        "maintenance laravel"
     ],
     "licence": "MIT",
     "autoload": {
