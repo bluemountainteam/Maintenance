@@ -2,7 +2,7 @@
 @section('content')
     <div class=" margin-bottom-10 text-right">
         <a class="btn btn-primary"
-           href="{{action('\Dlouvard\LaravelGestionmaintenance\GestionMaintenanceController@create')}}"><i
+           href="{{action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@create')}}"><i
                     class="fa fa-plus"></i> Créer une maintenance</a>
     </div>
     <section class="clearfix" id="widget-grid">
@@ -24,7 +24,7 @@
                             <th>{{trad("Début")}}</th>
                             <th>{{trad("Fin")}}</th>
                             <th>Créateur</th>
-                            <th>{{trad("Créer le")}}</th>
+                            <th>{{trad("Créé le")}}</th>
                             <th data-hide="phone" class="nofullscrenn"></th>
                         </tr>
                         </thead>
@@ -42,8 +42,7 @@
                                 <td class="hidden-xs">
                                     <a class="btn btn-danger btndangerwhite btn-xs" data-method="delete"
                                        data-confirm="{{trad('Etes vous sur de vouloir supprimer cette maintenance ?')}}"
-                                       href="{{action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@destroy',$v->id)}}"><i
-                                                class="fa fa-trash-o"></i></a>
+                                       href="{{action('\BlueMountainTeam\LaravelGestionmaintenance\GestionMaintenanceController@destroy',$v->id)}}"><i class="fa fa-trash-o"></i></a>
                                 </td>
                             </tr>
                         @endforeach

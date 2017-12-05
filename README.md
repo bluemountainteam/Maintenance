@@ -21,14 +21,17 @@ In your project base directory run
 	
 To bring up the config file run, if you want to customize
 
-	php artisan vendor:publish
-	php artisan migrate
-	
-Then edit `config/app.php` and add the service provider within the `providers` array.
+Edit `config/app.php` and add the service provider within the `providers` array.
 
 	'providers' => array(
 		...
 		Dlouvard\LaravelGestionmaintenance\GestionmaintenanceServiceProvider::class,
+		
+Then
+
+	php artisan vendor:publish
+	php artisan migrate
+
 
 <a id="usage"></a>
 ## Usage

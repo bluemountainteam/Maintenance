@@ -39,13 +39,13 @@ if (!function_exists('maintenance_remaning')) {
             return \BlueMountainTeam\LaravelGestionmaintenance\Models\Maintenance::where('status', 1)->first();
         });
 
-        $restant = \Carbon::parse($maintenance->begin)->timestamp - \Carbon::now()->timestamp;
+        $restant = \Carbon\Carbon::parse($maintenance->begin)->timestamp - \Carbon\Carbon::now()->timestamp;
         if ($restant < 3600):
-            \Carbon::setLocale('fr');
+            \Carbon\Carbon::setLocale('fr');
             if ($date == 'begin'):
-                return \Carbon::now()->diffForHumans(\Carbon::parse($maintenance->begin));
+                return \Carbon\Carbon::now()->diffForHumans(\Carbon\Carbon::parse($maintenance->begin));
             else:
-                return \Carbon::now()->diffForHumans(\Carbon::parse($maintenance->end));
+                return \Carbon\Carbon::now()->diffForHumans(\Carbon\Carbon::parse($maintenance->end));
             endif;
         endif;
     }

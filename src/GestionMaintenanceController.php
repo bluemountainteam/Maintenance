@@ -12,7 +12,7 @@ namespace BlueMountainTeam\LaravelGestionmaintenance;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Carbon\Carbon;
-use \Dlouvard\LaravelGestionmaintenance\Models\Maintenance;
+use \BlueMountainTeam\LaravelGestionmaintenance\Models\Maintenance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -26,6 +26,9 @@ class GestionMaintenanceController extends Controller
 
     public function create()
     {
+        getDatePicker();
+        getValidate();
+        getClockPicker();
         $maintenance = new Maintenance();
         $maintenance->begin = Carbon::now()->format('d/m/Y');
         $maintenance->begin_clock = '12:00';
@@ -70,6 +73,9 @@ class GestionMaintenanceController extends Controller
      */
     public function edit($id)
     {
+        getDatePicker();
+        getValidate();
+        getClockPicker();
         $maintenance = Maintenance::find($id);
         $maintenance->begin_clock = Carbon::parse($maintenance->begin)->setTimezone('Europe/Paris')->format('H:i');
         $maintenance->begin = Carbon::parse($maintenance->begin)->format('d/m/Y');
